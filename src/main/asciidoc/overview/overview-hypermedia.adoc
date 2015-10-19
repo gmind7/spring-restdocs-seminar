@@ -1,0 +1,9 @@
+[[overview-hypermedia]]
+=== Hypermedia
+
+모든 자원은 하나 이상 있을 수 있습니다._links는 self, other 자원에 대해 리소스 링크 속성을 제공하여 클라이언트가 URL을 구성 할 필요가 없도록
+명시적으로 URL을 지원 하여 개발자가 향후에 쉽게 API를 업그레이드를 할 수 있도록 하기 위함 입니다.
+
+ * Atom – 응답 되는 컨텐츠 타입이 `application/json` 과 호환 될 때 `links`의 구성은 순수 데이터 리스트가 될 것 입니다.
+ * HAL - 응답 되는 컨텐츠 타입이 `application/hal+json` 과 호환 될 때 `links`의 구성은 데이터+정보 맵 정보가 될 것 입니다.
+

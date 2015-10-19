@@ -1,0 +1,21 @@
+= Appointment RESTful Developer API Documents
+Modern Java web application with Spring
+:stylesheet : static/css/nanum.css
+
+[[abstract]]
+
+include::abstract.adoc[]
+
+|===
+| RELEASE | STATUS | DOCUMENTATION
+
+| `V2`
+| CURRENT
+| link:v1.html[Reference]
+
+| `V1`
+| CURRENT
+| link:v1.html[Reference]
+|===
+
+:last-update-label!:

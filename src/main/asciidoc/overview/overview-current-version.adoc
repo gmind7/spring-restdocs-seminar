@@ -1,0 +1,9 @@
+[[overview-current-version]]
+=== Current Version
+
+모든 요청을 기본적으로 v1 버전의 API로 받게 되어 있지만 명시적으로 수락 `HEADER` 에 Accept 버전을 요청하는 것이 좋습니다.
+
+[source,bash,indent=0]
+----
+Accept: application/vnd.le.v1+json
+----

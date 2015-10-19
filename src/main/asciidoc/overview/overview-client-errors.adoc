@@ -1,0 +1,12 @@
+[[overview-client-errors]]
+=== Client Errors
+
+오류 응답 (상태 코드> = 400)가 리턴 될 때마다, 오류 정보에 대한 내용이 JSON 객체로 전달 되어 지며 데이터 형태는 다음과 같습니다.
+
+include::{snippets}/client-error-bad-request/response-fields.adoc[]
+
+예를 들어, 존재 하지 않는 리소스에 대한 시도 요청시 `(404) Not Found` 대한 응답
+
+include::{snippets}/client-error-bad-request/http-response.adoc[]
+
+

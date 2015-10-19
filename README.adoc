@@ -1,0 +1,40 @@
+:seminar-link: http://www.ksug.org/seminar/20151024
+:seminar-slide-link: http://slides.com/gmind7/spirngrestdocs
+
+= Modern Java web application with Spring
+
+== Overview
+
+{seminar-link}[Modern Java web application with Spring] 세미나를 통해 공유한
+
+Making your API easy to document with Spring REST Docs 섹션 샘플링 프로젝트 입니다.
+
+image::restfulapi-documents.png[]
+
+== Learning more
+
+{seminar-slide-link}[Slides] 자료
+
+== Building from source
+
+requires Java8
+
+* WAS Start
+
+[source,groovy,indent=0]
+----
+gradlew bootRun
+----
+
+API : http://127.0.0.1:8080
+
+Doc : http://127.0.0.1:8080/docs
+
+* adoc remake
+
+[source,groovy,indent=0]
+----
+gradlew copyAsciidocResources
+----
+
+

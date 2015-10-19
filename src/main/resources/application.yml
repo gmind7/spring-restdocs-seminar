@@ -1,0 +1,36 @@
+---
+spring:
+  profiles: default,test
+  datasource:
+    url: jdbc:hsqldb:mem:spring-restdocs:charaset=UTF-8
+    username: sa
+    password:
+    driver-class-name: org.hsqldb.jdbcDriver
+  mvc:
+    favicon:
+      enabled: false
+  mustach:
+    check-template-location: false
+  jackson:
+    date-format: yyyy-MM-DD HH:mm:ss
+    serialization-inclusion: NON_NULL
+    serialization:
+      indent_output: true
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+---
+spring:
+  profiles: mysql
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/spring-restdocs
+    username: restdocs
+    password: restdocs
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    properties:
+      hibernate.dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+      hibernate.hbm2ddl.auto: create-drop

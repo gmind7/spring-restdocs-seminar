@@ -1,0 +1,126 @@
+[[resources-patients]]
+=== Patients
+
+환자 목록과 상세 정보, 생성, 수정, 삭제를 요청 하는데 사용 합니다.
+
+[[resources-patients-show-all]]
+==== /patients [small silver]*[GET]*
+
+`GET` 요청은 환자 리스트를 검색 합니다.
+
+include::{snippets}/patients-show-all/http-request.adoc[]
+
+===== Request Structure
+
+====== request-parameters
+
+include::{snippets}/patients-show-all/request-parameters.adoc[]
+
+===== Response Structure
+
+====== response-fields
+
+include::{snippets}/patients-show-all/response-fields.adoc[]
+
+===== Example Response
+
+include::{snippets}/patients-show-all/http-response.adoc[]
+
+[[resources-index-links]]
+===== Links
+
+include::{snippets}/patients-show-all/links.adoc[]
+
+
+[[resources-patients-show-one]]
+==== /patients/{id} [small silver]*[GET]*
+
+`GET` 요청은 환자 정보를 검색 합니다.
+
+include::{snippets}/patients-show-one/http-request.adoc[]
+
+===== Request Structure
+
+====== path-parameters
+
+include::{snippets}/patients-show-one/path-parameters.adoc[]
+
+===== Response Structure
+
+====== response-fields
+[[resources-patients-show-one-response-fields]]
+
+include::{snippets}/patients-show-one/response-fields.adoc[]
+
+===== Example Response
+
+include::{snippets}/patients-show-one/http-response.adoc[]
+
+[[resources-index-links]]
+===== Links
+
+include::{snippets}/patients-show-one/links.adoc[]
+
+
+[[resources-patients-create]]
+==== /patients/{id} [small silver]*[PUT]*
+
+`PUT` 요청은 환자 정보를 생성 합니다.
+
+include::{snippets}/patients-create/http-request.adoc[]
+
+===== Request Structure
+
+====== request-fields
+
+include::{snippets}/patients-create/request-fields.adoc[]
+
+===== Response Structure
+
+====== response-headers
+
+include::{snippets}/patients-create/response-headers.adoc[]
+
+===== Example Response
+
+include::{snippets}/patients-create/http-response.adoc[]
+
+
+[[resources-patients-update]]
+==== /patients/{id} [small silver]*[PATCH]*
+
+`PATCH` 요청은 환자 정보를 수정 합니다.
+
+include::{snippets}/patients-update/http-request.adoc[]
+
+===== Request Structure
+
+====== path-parameters
+
+include::{snippets}/patients-delete/path-parameters.adoc[]
+
+====== request-fields
+
+include::{snippets}/patients-create/request-fields.adoc[]
+
+===== Example Response
+
+include::{snippets}/patients-update/http-response.adoc[]
+
+
+[[resources-patients-delete]]
+==== /patients/{id} [small silver]*[DELETE]*
+
+`DELETE` 요청은 환자 정보를 삭제 합니다.
+
+include::{snippets}/patients-delete/http-request.adoc[]
+
+===== Request Structure
+
+====== path-parameters
+
+include::{snippets}/patients-delete/path-parameters.adoc[]
+
+===== Example Response
+
+include::{snippets}/patients-delete/http-response.adoc[]

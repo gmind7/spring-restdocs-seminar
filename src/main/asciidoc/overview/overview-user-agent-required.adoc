@@ -1,0 +1,20 @@
+[[overview-user-agent-required]]
+=== User Agent Required
+
+모든 API의 요청에는 `User-Agent` 가 포함되어야 하며 유효해야 합니다. `User-Agent` 포함되지 않은 경우 거부 되며 요청할 대상의 `User-Agent` 는 이미 협의 된 응용 프로그램의 이름을 사용해야 합니다.
+문제가 있는 경우 다음과 같이 응답 되어 집니다.
+
+[source,bash,indent=0]
+----
+curl -iH 'User-Agent: ' http://root-endpoint
+----
+
+[source,http]
+----
+HTTP/1.1 403 Forbidden
+
+Connection: close
+
+Content-Type: text/html
+----
+

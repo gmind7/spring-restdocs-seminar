@@ -1,0 +1,50 @@
+[[overview-schema]]
+=== Schema
+
+모든 API의 엑세스는 HTTP를 통해 허용 되며 모든 데이터는 JSON 객체 형태로 요청/수신 되어 집니다.
+
+[source,bash,indent=0]
+----
+$ curl 'http://root-endpoint' -i
+----
+
+[source,bash,indent=0]
+----
+HTTP/1.1 200 OK
+
+Server: nginx
+
+Date: Fri, 12 Oct 2015 23:33:14 GMT
+
+Content-Type: application/hal+json; charset=utf-8
+
+Connection: keep-alive
+
+Status: 200 OK
+
+ETag: "a00049ba79152d03380c34652f2cb612"
+
+X-LE-Media-Type: le.v1
+
+X-RateLimit-Limit: 5000
+
+X-RateLimit-Remaining: 4987
+
+X-RateLimit-Reset: 1350085394
+
+Content-Length: 5
+
+Cache-Control: max-age=0, private, must-revalidate
+
+X-Content-Type-Options: nosniff
+
+[]
+----
+
+빈 필드가 포함되어 있는 경우 `null` 대신 생략 되어 지며 모든 타임 스탬프는 ISO 8601 형식으로 반환됩니다
+
+[source,bash,indent=0]
+----
+YYYY-MM-DDTHH:MM:SSZ
+----
+

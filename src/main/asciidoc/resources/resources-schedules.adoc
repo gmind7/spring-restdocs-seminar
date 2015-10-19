@@ -1,0 +1,126 @@
+[[resources-schedules]]
+=== Schedules
+
+진료 스케쥴 목록과 상세 정보, 생성, 수정, 삭제를 요청 하는데 사용 합니다.
+
+[[resources-schedules-show-all]]
+==== /schedules [small silver]*[GET]*
+
+`GET` 요청은 진료 스케쥴 리스트를 검색 합니다.
+
+include::{snippets}/schedules-show-all/http-request.adoc[]
+
+===== Request Structure
+
+====== request-parameters
+
+include::{snippets}/schedules-show-all/request-parameters.adoc[]
+
+===== Response Structure
+
+====== response-fields
+[[resources-schedules-show-all-response-fields]]
+
+include::{snippets}/schedules-show-all/response-fields.adoc[]
+
+===== Example Response
+
+include::{snippets}/schedules-show-all/http-response.adoc[]
+
+[[resources-index-links]]
+===== Links
+
+include::{snippets}/schedules-show-all/links.adoc[]
+
+
+[[resources-schedules-show-one]]
+==== /schedules/{id} [small silver]*[GET]*
+
+`GET` 요청은 진료 스케쥴 정보를 검색 합니다.
+
+include::{snippets}/schedules-show-one/http-request.adoc[]
+
+===== Request Structure
+
+====== path-parameters
+
+include::{snippets}/schedules-show-one/path-parameters.adoc[]
+
+===== Response Structure
+
+====== response-fields
+
+include::{snippets}/schedules-show-one/response-fields.adoc[]
+
+===== Example Response
+
+include::{snippets}/schedules-show-one/http-response.adoc[]
+
+[[resources-index-links]]
+===== Links
+
+include::{snippets}/schedules-show-one/links.adoc[]
+
+
+[[resources-schedules-create]]
+==== /schedules/{id} [small silver]*[PUT]*
+
+`PUT` 요청은 진료 스케쥴 정보를 생성 합니다.
+
+include::{snippets}/schedules-create/http-request.adoc[]
+
+===== Request Structure
+
+====== request-fields
+
+include::{snippets}/schedules-create/request-fields.adoc[]
+
+===== Response Structure
+
+====== response-headers
+
+include::{snippets}/schedules-create/response-headers.adoc[]
+
+===== Example Response
+
+include::{snippets}/schedules-create/http-response.adoc[]
+
+
+[[resources-schedules-update]]
+==== /schedules/{id} [small silver]*[PATCH]*
+
+`PATCH` 요청은 진료 스케쥴 정보를 수정 합니다.
+
+include::{snippets}/schedules-update/http-request.adoc[]
+
+===== Request Structure
+
+====== path-parameters
+
+include::{snippets}/schedules-delete/path-parameters.adoc[]
+
+====== request-fields
+
+include::{snippets}/schedules-create/request-fields.adoc[]
+
+===== Example Response
+
+include::{snippets}/schedules-update/http-response.adoc[]
+
+
+[[resources-schedules-delete]]
+==== /schedules/{id} [small silver]*[DELETE]*
+
+`DELETE` 요청은 진료 스케쥴 정보를 삭제 합니다.
+
+include::{snippets}/schedules-delete/http-request.adoc[]
+
+===== Request Structure
+
+====== path-parameters
+
+include::{snippets}/schedules-delete/path-parameters.adoc[]
+
+===== Example Response
+
+include::{snippets}/schedules-delete/http-response.adoc[]

@@ -1,0 +1,38 @@
+= Appointment RESTful Developer API Documents
+Modern Java web application with Spring
+v1.0, 2014-01-01
+:toc: left
+:toclevels: 3
+:stylesheet : static/css/nanum.css
+
+[[abstract]]
+
+include::abstract.adoc[]
+
+[[overview]]
+== Overview
+
+include::overview/overview-current-version.adoc[]
+include::overview/overview-schema.adoc[]
+include::overview/overview-parameters.adoc[]
+include::overview/overview-root-endpoint.adoc[]
+include::overview/overview-client-errors.adoc[]
+include::overview/overview-http-redirects.adoc[]
+include::overview/overview-http-verbs.adoc[]
+include::overview/overview-authentication.adoc[]
+include::overview/overview-hypermedia.adoc[]
+include::overview/overview-pagination.adoc[]
+include::overview/overview-rate-limiting.adoc[]
+include::overview/overview-user-agent-required.adoc[]
+include::overview/overview-conditional-requests.adoc[]
+include::overview/overview-cors.adoc[]
+include::overview/overview-json-p-callbacks.adoc[]
+include::overview/overview-timezones.adoc[]
+
+[[resources]]
+== Resources
+
+include::resources/resources-index.adoc[]
+include::resources/resources-doctors.adoc[]
+include::resources/resources-patients.adoc[]
+include::resources/resources-schedules.adoc[]

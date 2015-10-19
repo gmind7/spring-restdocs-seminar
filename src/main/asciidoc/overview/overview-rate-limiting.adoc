@@ -1,0 +1,63 @@
+[[overview-rate-limiting]]
+=== Rate Limiting
+
+클라이언트는 5,000/시간, 60/초당 요청을 할 수 있습니다. 모든 요청 제한 상태는 HTTP HEADER를 통해 반환 되며 확인 할 수 있습니다.
+
+[source,bash,indent=0]
+----
+$ curl 'http://root-endpoint' -i
+----
+
+[source,http]
+----
+HTTP/1.1 200 OK
+
+Date: Mon, 01 Jul 2015 17:27:06 GMT
+
+Status: 200 OK
+
+X-RateLimit-Limit: 5000
+
+X-RateLimit-Remaining: 4987
+
+X-RateLimit-Reset: 1350085394
+----
+
+|===
+| Verb | Description
+
+| `X-RateLimit-Limit`
+| 시간 당 허용되는 최대 요청 수
+
+| `X-RateLimit-Remaining`
+| 현재 나머지 요청 가능 횟수
+
+| `X-RateLimit-Reset`
+| 현재 요청 제한 횟수가 재설정되는 시간
+|===
+
+요청 제한에 걸려 이동하면 다음과 같은 오류 응답을 받게 됩니다.
+
+[source,http]
+----
+HTTP/1.1 403 Forbidden
+
+Date: Mon, 01 Jul 2015 17:27:06 GMT
+
+Status: 403 Forbidden
+
+X-RateLimit-Limit: 60
+
+X-RateLimit-Remaining: 0
+
+X-RateLimit-Reset: 1350085394
+
+{
+  "timestamp" : "2015-09-17 11:40:30",
+  "status" : 403,
+  "error" : "Forbidden",
+  "message" : "You have triggered an abuse detection mechanism and have been temporarily blocked from content creation. Please retry your request again later.",
+  "path" : "http://root-endpoint/doctors"
+}
+----
+

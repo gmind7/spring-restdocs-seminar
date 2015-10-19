@@ -1,0 +1,54 @@
+[[overview-pagination]]
+=== Pagination
+
+리스트 항목에 대한 요청은 기본값으로(0 page/50 size)로 반환 되어 지며 페이지 파라미터 변수를 통해 검색 범위에 대해 요청 할 수 있습니다.
+예를 들어 의사 목록의 1 page의 10개의 데이터 리스트 항목은 다음과 같이 요청 할 수 있습니다.
+
+[source,bash,indent=0]
+----
+$ curl 'http://root-endpoint/doctors?page=1&size=10'
+----
+
+모든 리스트 항목에 대해 페이지 파라미터 변수는 동일하게 지원 됩니다.
+
+|===
+| Params | Description
+
+| `page`
+| 페이지 번호
+
+| `size`
+| 페이지 번호에서의 목록 사이즈
+|===
+
+[source,json,indent=0]
+----
+{
+  "_links": {
+    "self": {
+      "href": "http://localhost:8080/doctors?page=1&size=10{&sort}",
+      "templated": true
+    },
+    "next": {
+      "href": "http://localhost:8080/doctors?page=2&size=10{&sort}",
+      "templated": true
+    },
+    "prev": {
+      "href": "http://localhost:8080/doctors?page=0&size=10{&sort}",
+      "templated": true
+    }
+  },
+  "_embedded" : {
+    "doctors": [
+        ...................................
+    ]
+  },
+  "page": {
+    "size": 10,
+    "totalElements": 30,
+    "totalPages": 3,
+    "number": 1
+  }
+}
+
+----

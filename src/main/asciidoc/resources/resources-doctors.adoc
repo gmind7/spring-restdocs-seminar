@@ -1,0 +1,126 @@
+[[resources-doctors]]
+=== Doctors
+
+의사 목록과 상세 정보, 생성, 수정, 삭제를 요청 하는데 사용 합니다.
+
+[[resources-doctors-show-all]]
+==== /doctors [small silver]*[GET]*
+
+`GET` 요청은 의사 리스트를 검색 합니다.
+
+include::{snippets}/doctors-show-all/http-request.adoc[]
+
+===== Request Structure
+
+====== request-parameters
+
+include::{snippets}/doctors-show-all/request-parameters.adoc[]
+
+===== Response Structure
+
+====== response-fields
+
+include::{snippets}/doctors-show-all/response-fields.adoc[]
+
+===== Example Response
+
+include::{snippets}/doctors-show-all/http-response.adoc[]
+
+[[resources-index-links]]
+===== Links
+
+include::{snippets}/doctors-show-all/links.adoc[]
+
+
+[[resources-doctors-show-one]]
+==== /doctors/{id} [small silver]*[GET]*
+
+`GET` 요청은 의사 정보를 검색 합니다.
+
+include::{snippets}/doctors-show-one/http-request.adoc[]
+
+===== Request Structure
+
+====== path-parameters
+
+include::{snippets}/doctors-show-one/path-parameters.adoc[]
+
+===== Response Structure
+
+====== response-fields
+[[resources-doctors-show-one-response-fields]]
+
+include::{snippets}/doctors-show-one/response-fields.adoc[]
+
+===== Example Response
+
+include::{snippets}/doctors-show-one/http-response.adoc[]
+
+[[resources-index-links]]
+===== Links
+
+include::{snippets}/doctors-show-one/links.adoc[]
+
+
+[[resources-doctors-create]]
+==== /doctors/{id} [small silver]*[PUT]*
+
+`PUT` 요청은 의사 정보를 생성 합니다.
+
+include::{snippets}/doctors-create/http-request.adoc[]
+
+===== Request Structure
+
+====== request-fields
+
+include::{snippets}/doctors-create/request-fields.adoc[]
+
+===== Response Structure
+
+====== response-headers
+
+include::{snippets}/doctors-create/response-headers.adoc[]
+
+===== Example Response
+
+include::{snippets}/doctors-create/http-response.adoc[]
+
+
+[[resources-doctors-update]]
+==== /doctors/{id} [small silver]*[PATCH]*
+
+`PATCH` 요청은 의사 정보를 수정 합니다.
+
+include::{snippets}/doctors-update/http-request.adoc[]
+
+===== Request Structure
+
+====== path-parameters
+
+include::{snippets}/doctors-delete/path-parameters.adoc[]
+
+====== request-fields
+
+include::{snippets}/doctors-create/request-fields.adoc[]
+
+===== Example Response
+
+include::{snippets}/doctors-update/http-response.adoc[]
+
+
+[[resources-doctors-delete]]
+==== /doctors/{id} [small silver]*[DELETE]*
+
+`DELETE` 요청은 의사 정보를 삭제 합니다.
+
+include::{snippets}/doctors-delete/http-request.adoc[]
+
+===== Request Structure
+
+====== path-parameters
+
+include::{snippets}/doctors-delete/path-parameters.adoc[]
+
+===== Example Response
+
+include::{snippets}/doctors-delete/http-response.adoc[]

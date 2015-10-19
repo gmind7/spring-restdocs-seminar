@@ -1,0 +1,22 @@
+[[overview-parameters]]
+=== Parameters
+
+GET, POST 요청 경로의 세그먼트로 지정된 PathVariable/MatrixVariable 매개 변수와 HTTP 쿼리 문자열 매개 변수로 전달 할 수 있습니다.
+
+ * PathVariable
+[source,bash,indent=0]
+----
+$ curl 'http://root-endpoint/doctors/{id}/schedules/{scheduleId}'
+----
+
+ * MatrixVariable
+[source,bash,indent=0]
+----
+$ curl 'http://root-endpoint/doctors/1;name=kim/schedules/1;startTime=1200'
+----
+
+ * QueryString
+[source,bash,indent=0]
+----
+$ curl 'http://root-endpoint/doctors?page=2&size=50'
+----

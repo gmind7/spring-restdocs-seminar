@@ -1,0 +1,18 @@
+[[overview-root-endpoint]]
+=== Root Endpoint
+
+모든 엔드 포인트 카테고리들의 API 정보를 제공하는 망별 루트 엔트 포인트는 다음과 같습니다.
+
+|===
+| Networks | URL
+
+| `DEV`
+| http://127.0.0.1:8090
+
+| `RC`
+| http://127.0.0.1:8090
+
+| `LIVE`
+| http://127.0.0.1:8090
+|===
+
