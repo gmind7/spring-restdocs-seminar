@@ -23,18 +23,10 @@ requires Java8
 
 [source,groovy,indent=0]
 ----
-gradlew bootRun
+gradlew copyAsciidocResources bootRun
 ----
 
 API : http://127.0.0.1:8080
 
 Doc : http://127.0.0.1:8080/docs
-
-* adoc remake
-
-[source,groovy,indent=0]
-----
-gradlew copyAsciidocResources
-----
-
 

@@ -96,10 +96,12 @@ liveReload {
 
 task copyAsciidocResources(dependsOn: asciidoctor, group: 'Documentation', description: 'Converts AsciiDoc files and copies the output files and related resources to the build directory.') {
     file("src/main/resources/static/docs").deleteDir()
-    copy {
-        from "${asciidoctor.outputDir}/html5"
-        into "${project.getProjectDir()}/src/main/resources/static/docs"
-    }
+    doLast {
+        copy {
+            from "${asciidoctor.outputDir}/html5"
+            into "${project.getProjectDir()}/src/main/resources/static/docs"
+        }
+    }    
 }
 
 jar {
