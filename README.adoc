@@ -33,7 +33,7 @@ Doc : http://127.0.0.1:8080/docs
 
 * IDEA, STS, Eclipse WAS Start
 
-requires Java8, {lombok-link}[Lombok]
+requires {lombok-link}[Lombok]
 
 gradlew copyAsciidocResources task 실행하면 *.adoc -> *.html 만들어 진 후 src/main/resource/static/docs 폴더 밑에 copy 되어 집니다.
 
