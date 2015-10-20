@@ -51,6 +51,17 @@ dependencyManagement {
     }
 }
 
+configurations {
+    all {
+        exclude group: 'commons-logging'
+        exclude module: 'slf4j-log4j12'
+        resolutionStrategy {
+            cacheChangingModulesFor 0, 'seconds'
+            cacheDynamicVersionsFor 10 * 60, 'seconds'
+        }
+    }
+}
+
 dependencies {
     compile 'org.springframework.boot:spring-boot-starter-data-jpa'
     compile 'org.springframework.boot:spring-boot-starter-hateoas'

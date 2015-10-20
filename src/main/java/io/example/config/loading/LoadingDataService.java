@@ -1,4 +1,4 @@
-package io.example.config.bulk;
+package io.example.config.loading;
 
 import com.google.common.collect.Lists;
 import io.example.doctor.Doctor;
@@ -23,7 +23,7 @@ import java.util.stream.IntStream;
  */
 @Slf4j
 @Service
-public class BulkDataCreateService {
+public class LoadingDataService {
 
     @Autowired
     private DoctorJpaRepository doctorJpaRepository;
@@ -35,6 +35,7 @@ public class BulkDataCreateService {
     private ScheduleJpaRepository scheduleJpaRepository;
 
     public void createDoctor(int startInclusive, int endExclusive) {
+        log.debug("Loading Create Doctor Data");
         this.doctorJpaRepository.deleteAll();
         IntStream.range(startInclusive, endExclusive).forEach(x -> {
             Doctor doctor = new Doctor();
@@ -44,6 +45,7 @@ public class BulkDataCreateService {
     }
 
     public void createPatient(int startInclusive, int endExclusive) {
+       log.debug("Loading Create Patient Data");
         this.patientJpaRepository.deleteAll();
         IntStream.range(startInclusive, endExclusive).forEach(x -> {
             Patient patient = new Patient();
@@ -54,6 +56,7 @@ public class BulkDataCreateService {
     }
 
     public void createSchedule() {
+        log.debug("Loading Create Schedule Data");
         this.scheduleJpaRepository.deleteAll();
 
         List<LocalDateTime> scheduleCalendar = scheduleCalendar();

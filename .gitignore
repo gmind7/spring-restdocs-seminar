@@ -37,3 +37,4 @@ rebel.xml
 # ETC Files #
 .DS_Store
 *.log
+/.apt_generated/

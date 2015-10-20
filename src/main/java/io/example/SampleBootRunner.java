@@ -1,6 +1,6 @@
 package io.example;
 
-import io.example.config.bulk.BulkDataCreateService;
+import io.example.config.loading.LoadingDataService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -14,7 +14,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 public class SampleBootRunner implements CommandLineRunner {
 
     @Autowired
-    private BulkDataCreateService bulkDataCreateService;
+    private LoadingDataService loadingDataService;
 
 	public static void main(String[] args) throws Exception {
         SpringApplication.run(SampleBootRunner.class, args);
@@ -22,8 +22,8 @@ public class SampleBootRunner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        bulkDataCreateService.createDoctor(0, 29);
-        bulkDataCreateService.createPatient(0, 29);
-        bulkDataCreateService.createSchedule();
+        loadingDataService.createDoctor(0, 29);
+        loadingDataService.createPatient(0, 29);
+        loadingDataService.createSchedule();
     }
 }

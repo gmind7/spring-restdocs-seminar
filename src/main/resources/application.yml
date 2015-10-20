@@ -6,6 +6,8 @@ spring:
     username: sa
     password:
     driver-class-name: org.hsqldb.jdbcDriver
+  jpa:
+    show-sql: true
   mvc:
     favicon:
       enabled: false
@@ -21,12 +23,17 @@ spring:
       charset: UTF-8
       enabled: true
       force: true
+logging:
+  level:
+#    org.hibernate: INFO
+#    org.hibernate.type : TRACE
+    io.example: DEBUG
 
 ---
 spring:
   profiles: mysql
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/spring-restdocs
+    url: jdbc:mysql://127.0.0.1:3306/spring-rest-docs
     username: restdocs
     password: restdocs
     driver-class-name: com.mysql.jdbc.Driver

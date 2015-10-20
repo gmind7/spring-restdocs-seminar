@@ -1,7 +1,5 @@
 package io.example.index;
 
-import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
-
 import io.example.doctor.DoctorRestController;
 import io.example.patient.PatientRestController;
 import io.example.schedule.ScheduleRestController;
@@ -9,6 +7,8 @@ import org.springframework.hateoas.ResourceSupport;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 
 /**
  * Created by gmind on 2015-10-06.

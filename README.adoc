@@ -10,7 +10,13 @@
 
 Making your API easy to document with Spring REST Docs 섹션 샘플링 프로젝트 입니다.
 
+=== Example RESTful API Documents
+
 image::restfulapi-documents.png[]
+
+=== Example RESTful API Data Schema
+
+image::restuflapi-data-schema.png[]
 
 == Learning more
 
