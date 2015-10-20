@@ -16,7 +16,7 @@ image::restfulapi-documents.png[]
 
 === Example RESTful API Data Schema
 
-image::restuflapi-data-schema.png[]
+image::restfulapi-data-schema.png[]
 
 == Learning more
 
