@@ -33,7 +33,7 @@ logging:
 spring:
   profiles: mysql
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/spring-rest-docs
+    url: jdbc:mysql://127.0.0.1:3306/spring-restdocs
     username: restdocs
     password: restdocs
     driver-class-name: com.mysql.jdbc.Driver
