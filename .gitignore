@@ -38,3 +38,4 @@ rebel.xml
 .DS_Store
 *.log
 /.apt_generated/
+src/main/resources/static/

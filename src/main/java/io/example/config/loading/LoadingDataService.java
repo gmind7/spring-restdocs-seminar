@@ -90,7 +90,7 @@ public class LoadingDataService {
         int currentDayOfMonth = currentDateTime.getDayOfMonth();
         int currentLastDayOfMonth = currentMonth.maxLength();
 
-        IntStream.range(currentDayOfMonth, currentLastDayOfMonth).forEach(day -> {
+        IntStream.rangeClosed(currentDayOfMonth, currentLastDayOfMonth).forEach(day -> {
             LocalDateTime startDateTime  = LocalDateTime.of(currentYear, currentMonth, day, 9, 0, 0);
             LocalDateTime finishDateTime = LocalDateTime.of(currentYear, currentMonth, day, 17, 30, 0);
             scheduleCalendar.add(startDateTime);
